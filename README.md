@@ -1,77 +1,91 @@
-# 🎬 Netflix Data Analysis & Recommendation System
+# 🎬 Netflix Data Analysis & Prediction System
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://netflix-data-analysis-prediction.streamlit.app/)
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.30+-FF4B4B?logo=streamlit&logoColor=white)
+![scikit--learn](https://img.shields.io/badge/scikit--learn-1.3+-F7931E?logo=scikit-learn&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+> Netflix data exploration, visualization, and recommendation system using Python, Seaborn, and Streamlit.
+
+---
+
+## 🚀 Live Demo
+
+**👉 [Click here to try the app live!](https://netflix-data-analysis-prediction.streamlit.app/)**
+
+No installation needed — runs directly in your browser!
+
+---
 
 ## 📌 Overview
 
 This project provides comprehensive analysis of Netflix's content library with **8,800+ titles**. It includes:
 
-- **Data Analysis**: Explore trends in content production, popular genres, and content distribution
-- **Interactive Dashboard**: A beautiful Streamlit web application for exploring the data
-- **Recommendation System**: AI-powered content recommendations using TF-IDF and cosine similarity
-- **Command-line Interface**: Quick access to insights and recommendations from the terminal
+- 📊 **Data Analysis**: Explore trends in content production, popular genres, and content distribution
+- 🌐 **Interactive Dashboard**: A beautiful Streamlit web application for exploring the data
+- 🤖 **Recommendation System**: AI-powered content recommendations using TF-IDF and cosine similarity
+- ⌨️ **Command-line Interface**: Quick access to insights and recommendations from the terminal
 
 ---
 
-## 🚀 Quick Start
+## 📸 App Screenshots
 
-### Installation
+### Dashboard Overview
+![Dashboard Overview](images/dashboard_overview.png)
 
-```bash
-# Clone the repository
-git clone https://github.com/kartikey-kk/Netflix-Data-Analysis.git
-cd Netflix-Data-Analysis
+### Content Analysis
+![Content Analysis](images/content_analysis.png)
 
-# Install dependencies
-pip install -r requirements.txt
-```
+### Genre Distribution
+![Genre Distribution](images/genre_distribution.png)
 
-### Run the Web Dashboard
+### Country-wise Analysis
+![Country Analysis](images/country_analysis.png)
 
-```bash
-streamlit run app.py
-```
+### Advanced Analytics
+![Advanced Analytics](images/advanced_analytics.png)
 
-This will open an interactive dashboard in your browser where you can:
-- View comprehensive statistics and visualizations
-- Search and filter content by title, genre, year, or rating
-- Get personalized recommendations for any Netflix title
-- Explore advanced analytics and trends
+---
 
-### Use the Command-line Interface
+## 📈 Key Insights from Notebook Analysis
 
-```bash
-# Show basic statistics
-python netflix_analyzer.py --stats
+### Movies vs TV Shows
+![Movies vs TV Shows](images/output.png)
+- Netflix has more movies (~70%) than TV shows (~30%)
 
-# Get recommendations for a title
-python netflix_analyzer.py --recommend "Narcos"
+### Top Content-Producing Countries
+![Top Countries](images/output2.png)
+- United States leads with the most content
+- India, UK, and Canada follow
 
-# Search for titles
-python netflix_analyzer.py --search "Stranger"
+### Content Added Over the Years
+![Content Over Years](images/output3.png)
+- Content addition has grown significantly since 2015
+- Peak content addition in 2019-2020
 
-# Filter by genre
-python netflix_analyzer.py --genre "Documentary"
+### Top Genres
+![Top Genres](images/output4.png)
+- International Movies, Dramas, and Comedies dominate
+- Documentaries and Kids' TV also popular
 
-# Filter by year range
-python netflix_analyzer.py --year 2020 2021
-
-# Show top countries
-python netflix_analyzer.py --top-countries 10
-
-# Generate all visualizations
-python netflix_analyzer.py --visualize --output-dir output
-```
+### Word Cloud of Titles
+![Word Cloud](images/output5.png)
+- Common words in titles visualized
 
 ---
 
 ## 🔧 Tech Stack
 
-- **Python**: Core programming language
-- **Pandas & NumPy**: Data manipulation and analysis
-- **Matplotlib & Seaborn**: Static visualizations
-- **WordCloud**: Text visualization
-- **scikit-learn**: TF-IDF vectorization & cosine similarity for recommendations
-- **Streamlit**: Interactive web dashboard
-- **Jupyter Notebook**: Exploratory analysis
+| Technology | Purpose |
+|-----------|---------|
+| **Python** | Core programming language |
+| **Pandas & NumPy** | Data manipulation and analysis |
+| **Matplotlib & Seaborn** | Static visualizations |
+| **WordCloud** | Text visualization |
+| **scikit-learn** | TF-IDF vectorization & cosine similarity for recommendations |
+| **Streamlit** | Interactive web dashboard |
+| **Jupyter Notebook** | Exploratory analysis |
 
 ---
 
@@ -115,30 +129,49 @@ The original notebook (`Netflix_Analysis.ipynb`) contains step-by-step explorato
 
 ---
 
-## 📈 Key Insights
+## 🚀 Quick Start
 
-### Movies vs TV Shows
-![Movies vs TV Shows](images/output.png)
-- Netflix has more movies (~70%) than TV shows (~30%)
+### Installation
 
-### Top Content-Producing Countries
-![Top Countries](images/output2.png)
-- United States leads with the most content
-- India, UK, and Canada follow
+```bash
+# Clone the repository
+git clone https://github.com/kartikey-kk/Netflix-Data-Analysis-Prediction.git
+cd Netflix-Data-Analysis-Prediction
 
-### Content Added Over the Years
-![Content Over Years](images/output3.png)
-- Content addition has grown significantly since 2015
-- Peak content addition in 2019-2020
+# Install dependencies
+pip install -r requirements.txt
+```
 
-### Top Genres
-![Top Genres](images/output4.png)
-- International Movies, Dramas, and Comedies dominate
-- Documentaries and Kids' TV also popular
+### Run the Web Dashboard
 
-### Word Cloud of Titles
-![Word Cloud](images/output5.png)
-- Common words in titles visualized
+```bash
+streamlit run app.py
+```
+
+### Use the Command-line Interface
+
+```bash
+# Show basic statistics
+python netflix_analyzer.py --stats
+
+# Get recommendations for a title
+python netflix_analyzer.py --recommend "Narcos"
+
+# Search for titles
+python netflix_analyzer.py --search "Stranger"
+
+# Filter by genre
+python netflix_analyzer.py --genre "Documentary"
+
+# Filter by year range
+python netflix_analyzer.py --year 2020 2021
+
+# Show top countries
+python netflix_analyzer.py --top-countries 10
+
+# Generate all visualizations
+python netflix_analyzer.py --visualize --output-dir output
+```
 
 ---
 
@@ -172,13 +205,18 @@ for rec in recommendations:
 ## 📁 Project Structure
 
 ```
-Netflix-Data-Analysis/
-├── app.py                  # Streamlit web dashboard
-├── netflix_analyzer.py     # Core analysis class & CLI
-├── Netflix_Analysis.ipynb  # Jupyter notebook analysis
-├── netflix_titles.csv      # Dataset (8,800+ titles)
-├── requirements.txt        # Python dependencies
-├── images/                 # Visualization outputs
+Netflix-Data-Analysis-Prediction/
+├── app.py                    # Streamlit web dashboard
+├── netflix_analyzer.py       # Core analysis class & CLI
+├── Netflix_Analysis.ipynb    # Jupyter notebook analysis
+├── netflix_titles.csv        # Dataset (8,800+ titles)
+├── requirements.txt          # Python dependencies
+├── images/                   # App screenshots & visualizations
+│   ├── dashboard_overview.png
+│   ├── content_analysis.png
+│   ├── genre_distribution.png
+│   ├── country_analysis.png
+│   ├── advanced_analytics.png
 │   ├── output.png
 │   ├── output2.png
 │   ├── output3.png
@@ -235,4 +273,4 @@ Contributions are welcome! Feel free to:
 
 ---
 
-Made with ❤️ for data enthusiasts and Netflix fans
+Made with ❤️ by [kartikey-kk](https://github.com/kartikey-kk) for data enthusiasts and Netflix fans
